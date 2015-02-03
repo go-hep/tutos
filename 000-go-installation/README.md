@@ -10,14 +10,13 @@ for a `Linux` based environment:
 
 ```sh
 $ mkdir -p $HOME/dev/go/root
-$ export GOROOT=$HOME/dev/go/root
+$ cd $HOME/dev/go/root
+$ curl -L https://golang.org/dl/go1.4.1.linux-amd64.tar.gz | tar zxf -
+$ export GOROOT=$HOME/dev/go/root/go
 $ export PATH=$GOROOT/bin:$PATH
-$ cd $GOROOT
-$ curl -O -L https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz
-$ tar zxf go1.4.1.linux-amd64.tar.gz
 
 $ which go
-~/dev/go/root/bin/go
+~/dev/go/root/go/bin/go
 ```
 
 ## Setting up the work environment
@@ -30,8 +29,8 @@ In the following, we'll assume you chose `$HOME/dev/go/path`:
 
 ```sh
 $ mkdir -p $HOME/dev/go/path
-$ export GOROOT=$HOME/dev/go/path
-$ export PATH=$GOROOT/bin:$PATH
+$ export GOPATH=$HOME/dev/go/path
+$ export PATH=$GOPATH/bin:$PATH
 ```
 
 Make sure the `go` tool is correctly setup:
@@ -47,8 +46,8 @@ GOHOSTOS="linux"
 GOOS="linux"
 GOPATH="$HOME/dev/go/path"
 GORACE=""
-GOROOT="$HOME/dev/go/root"
-GOTOOLDIR="$HOME/dev/go/root/pkg/tool/linux_amd64"
+GOROOT="$HOME/dev/go/root/go"
+GOTOOLDIR="$HOME/dev/go/root/go/pkg/tool/linux_amd64"
 CC="gcc"
 GOGCCFLAGS="-fPIC -m64 -pthread -fmessage-length=0"
 CXX="g++"
