@@ -67,7 +67,7 @@ Running with all the available processors (2 on this test machine), on
 5 events:
 
 ```sh
-fads-app -nprocs=-1 -evtmax=5 $GOPATH/src/github.com/go-hep/fads/testdata/hepmc.data 
+$ fads-app -nprocs=-1 -evtmax=5 $GOPATH/src/github.com/go-hep/fads/testdata/hepmc.data
 ::: fads-app...
 app                  INFO workers done: 1/2
 app                  INFO workers done: 2/2
