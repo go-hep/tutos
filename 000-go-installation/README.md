@@ -69,6 +69,8 @@ Without further ado:
 
 ```sh
 $ go get -v github.com/go-hep/tutos/000-go-installation/tuto-hello
+github.com/go-hep/tutos (download)
+github.com/go-hep/tutos/000-go-installation/tuto-hello
 ```
 
 `go get` downloaded (cloned, in `git` speak) the whole

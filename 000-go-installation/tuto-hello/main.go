@@ -13,7 +13,7 @@ func main() {
 	case 1:
 		fmt.Printf("Hello from go-hep/tutos!\n")
 	default:
-		for _, arg := range os.Args {
+		for _, arg := range os.Args[1:] {
 			fmt.Printf("Hello %s!\n", arg)
 		}
 	}
