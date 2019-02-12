@@ -1,7 +1,7 @@
 fads
 ====
 
-[fads](https://github.com/go-hep/fads) is a `FAst Detector Simulation` toolkit.
+[fads](https://go-hep.org/x/hep/fads) is a `FAst Detector Simulation` toolkit.
 
 ## Installation
 
@@ -9,7 +9,7 @@ Installing `fads` is done like for any other `Go` based application or
 package:
 
 ```sh
-$ go get -u -v github.com/go-hep/fads
+$ go get -u -v go-hep.org/x/hep/fads
 ```
 
 Alternatively, adding the ellipsis `...` instructs the `go get` tool
@@ -17,19 +17,19 @@ to also compile and install all the applications and packages *under*
 `go-hep/fads`:
 
 ```sh
-$ go get -u -v github.com/go-hep/fads/...
+$ go get -u -v go-hep.org/x/hep/fads/...
 ```
 
 `fads` is a toolkit; all the code directly under `/fads` is a `Go`
 package for implementing a fast simulation for HEP.
 
-An example application `fads-app` is provided: [cmd/fads-app/main.go](https://github.com/go-hep/fads/blob/master/cmd/fads-app/main.go)
+An example application `fads-app` is provided: [cmd/fads-app/main.go](https://github.com/go-hep/hep/blob/master/fads/cmd/fads-app/main.go)
 
 Installing & compiling this example application can thus be done like
 so:
 
 ```sh
-$ go get github.com/go-hep/fads/cmd/fads-app
+$ go get go-hep.org/x/hep/fads/cmd/fads-app
 ```
 
 The binary should then be available from the shell prompt:
@@ -52,7 +52,7 @@ A test `HepMC` file is also shipped with the `go-hep/fads` repository,
 under the `testdata` directory:
 
 ```sh
-$ fads-app $GOPATH/src/github.com/go-hep/fads/testdata/hepmc.data
+$ fads-app $GOPATH/src/go-hep.org/x/hep/fads/testdata/hepmc.data
 ::: fads-app...
 app                  INFO cpu: 1.948031994s
 app                  INFO mem: alloc:           3189 kB
@@ -67,7 +67,7 @@ Running with all the available processors (2 on this test machine), on
 5 events:
 
 ```sh
-$ fads-app -nprocs=-1 -evtmax=5 $GOPATH/src/github.com/go-hep/fads/testdata/hepmc.data
+$ fads-app -nprocs=-1 -evtmax=5 $GOPATH/src/go-hep.org/x/hep/fads/testdata/hepmc.data
 ::: fads-app...
 app                  INFO workers done: 1/2
 app                  INFO workers done: 2/2
