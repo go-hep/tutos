@@ -36,7 +36,7 @@ $ export GOPATH=$HOME/go
 $ export PATH=$GOPATH/bin:$PATH
 ```
 
-_Note: `$GOPATH` will probably go away with Go1.13_
+_Note: `$GOPATH` will probably go away with Go1.13._
 
 Make sure the `go` tool is correctly setup:
 
@@ -116,16 +116,17 @@ The `Go` programming language is quite new (released in 2009) but
 ships already with quite a fair amount of documentation.
 Here are a few pointers:
 
-- http://golang.org/doc/code.html
-- http://tour.golang.org
-- http://golang.org/doc/effective_go.html
-- http://dave.cheney.net/resources-for-new-go-programmers
-- http://gobyexample.com
+- https://golang.org/doc/code.html
+- https://tour.golang.org
+- https://golang.org/doc/effective_go.html
+- https://dave.cheney.net/resources-for-new-go-programmers
+- https://dave.cheney.net/practical-go/presentations/qcon-china.html
+- https://gobyexample.com
 
 For more advanced topics:
 
-- http://talks.golang.org
-- http://blog.golang.org
+- https://talks.golang.org
+- https://blog.golang.org
 - https://groups.google.com/d/forum/golang-nuts (`Go` community forum)
 - the internets. typical queries are `go something` or `golang something`
 
