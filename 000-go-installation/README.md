@@ -9,15 +9,18 @@ For people in a hurry, here are a couple of copy-paste instructions,
 for a `Linux` based environment:
 
 ```sh
-$ mkdir -p $HOME/dev/go/root
-$ cd $HOME/dev/go/root
-$ curl -L https://golang.org/dl/go1.4.1.linux-amd64.tar.gz | tar zxf -
-$ export GOROOT=$HOME/dev/go/root/go
+$ mkdir -p $HOME/sdk
+$ cd $HOME/sdk
+$ curl -L https://golang.org/dl/go1.12.linux-amd64.tar.gz | tar zxf -
+$ export GOROOT=$HOME/sdk/go
 $ export PATH=$GOROOT/bin:$PATH
 
 $ which go
-~/dev/go/root/go/bin/go
+~/sdk/go/bin/go
 ```
+
+At the time of writing, the latest version of Go is `1.12`.
+You should always try to download and install the latest one.
 
 ## Setting up the work environment
 
@@ -25,13 +28,15 @@ Like `python` and its `$PYTHONPATH` environment variable, `Go` uses
 `$GOPATH` to locate packages' source trees.
 You can choose whatever you like (obviously a directory under which
 you have read/write access, though.)
-In the following, we'll assume you chose `$HOME/dev/go/path`:
+In the following, we'll assume you chose `$HOME/go`:
 
 ```sh
-$ mkdir -p $HOME/dev/go/path
-$ export GOPATH=$HOME/dev/go/path
+$ mkdir -p $HOME/go
+$ export GOPATH=$HOME/go
 $ export PATH=$GOPATH/bin:$PATH
 ```
+
+_Note: `$GOPATH` will probably go away with Go1.13_
 
 Make sure the `go` tool is correctly setup:
 
@@ -44,10 +49,10 @@ GOEXE=""
 GOHOSTARCH="amd64"
 GOHOSTOS="linux"
 GOOS="linux"
-GOPATH="$HOME/dev/go/path"
+GOPATH="$HOME/go"
 GORACE=""
-GOROOT="$HOME/dev/go/root/go"
-GOTOOLDIR="$HOME/dev/go/root/go/pkg/tool/linux_amd64"
+GOROOT="$HOME/sdk/go"
+GOTOOLDIR="$HOME/sdk/go/pkg/tool/linux_amd64"
 CC="gcc"
 GOGCCFLAGS="-fPIC -m64 -pthread -fmessage-length=0"
 CXX="g++"
